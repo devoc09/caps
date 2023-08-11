@@ -11,16 +11,16 @@ type CLI struct {
 }
 
 var deployCommand *cli.Command = &cli.Command{
-    Name: "deploy",
-    Usage: "deploy application using yaml",
-    Flags: []cli.Flag{
-        &cli.StringFlag{
-            Name: "config",
-            Aliases: []string{"c"},
-            Usage: "Load configuration from `FILE`",
-        },
-    },
-    Action: deployAction,
+	Name:  "deploy",
+	Usage: "deploy application using yaml",
+	Flags: []cli.Flag{
+		&cli.StringFlag{
+			Name:    "config",
+			Aliases: []string{"c"},
+			Usage:   "Load configuration from `FILE`",
+		},
+	},
+	Action: deployAction,
 }
 
 func NewCLI() *CLI {
@@ -28,9 +28,9 @@ func NewCLI() *CLI {
 		App: &cli.App{
 			Name:  "caps",
 			Usage: "Deploy to Azure Container Apps",
-            Commands: cli.Commands{
-                deployCommand,
-            },
+			Commands: cli.Commands{
+				deployCommand,
+			},
 		},
 	}
 }
