@@ -1,0 +1,7 @@
+subscription: Sandbox
+ResourceGroup: example-containerapps
+region: Japan East
+environment: example-containerapps-environment
+services:
+  - name: example
+    image: example.io/example:latest
